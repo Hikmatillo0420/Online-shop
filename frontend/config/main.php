@@ -33,6 +33,19 @@ return [
                 ],
             ],
         ],
+        'assetManager' => [
+            'bundles' =>[
+                'yii\web\JqueryAsset' => [
+                    'js'=>[]
+                ],
+                'yii\bootstrap\BootstrapAsset' => [
+                    'js'=>[]
+                ],
+                'yii\bootstrap\BootstrapPluginAsset' => [
+                    'js'=>[],
+                ]
+            ]
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
