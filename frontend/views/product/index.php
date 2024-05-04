@@ -77,15 +77,19 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
         <div class="row">
-    <?php Pjax::begin(); ?>
 <!--    --><?php //echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= ListView::widget([
         'dataProvider' => $dataProvider,
-        'itemOptions' => ['class' => 'item'],
+        'itemOptions' => ['tag'=>null],
+        'options' => ['tag'=>null],
         'itemView' => '_item',
+        'pager'=>[
+                'class'=>'yii\bootstrap5\LinkPager',
+                'options'=>['tag'=>'div','class'=>'row'],
+                'listOptions'=>['class'=>'pagination pagination-lg justify-content-end']
+        ]
     ]) ?>
         </div>
-    <?php Pjax::end(); ?>
     </div>
 </div>
